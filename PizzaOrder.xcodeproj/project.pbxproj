@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3284D7D4F83F8FF0066AD628 /* Pods_PizzaOrder_PizzaOrderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B86BBD4FFED6DC9181A354D1 /* Pods_PizzaOrder_PizzaOrderUITests.framework */; };
+		76E07833EF9FD8A8152A5786 /* Pods_PizzaOrder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57163AC9B88C7850B716B414 /* Pods_PizzaOrder.framework */; };
+		AA4A03A3C8EE865154482DC4 /* Pods_PizzaOrderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A5A761E5A2CF65D29C78B8 /* Pods_PizzaOrderTests.framework */; };
+		CFD2AEFF2656E49100756268 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AEFE2656E49100756268 /* Login.swift */; };
+		CFD2AF082656EE7500756268 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF072656EE7500756268 /* Constants.swift */; };
+		CFD2AF102656EEA100756268 /* Constants+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF0F2656EEA100756268 /* Constants+Keys.swift */; };
+		CFD32BCC2656D7DC00D5F6C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD32BCB2656D7DC00D5F6C0 /* AppDelegate.swift */; };
+		CFD32BD52656D7E500D5F6C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFD32BD42656D7E500D5F6C0 /* Assets.xcassets */; };
+		CFD32BD82656D7E500D5F6C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFD32BD62656D7E500D5F6C0 /* LaunchScreen.storyboard */; };
+		CFD32BE32656D7E600D5F6C0 /* PizzaOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD32BE22656D7E600D5F6C0 /* PizzaOrderTests.swift */; };
+		CFD32BEE2656D7E600D5F6C0 /* PizzaOrderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD32BED2656D7E600D5F6C0 /* PizzaOrderUITests.swift */; };
+		CFD32C052656D8F500D5F6C0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD32C032656D8F500D5F6C0 /* LoginViewController.swift */; };
+		CFD32C062656D8F500D5F6C0 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD32C042656D8F500D5F6C0 /* LoginViewController.xib */; };
+		CFD32C0E2656DE1B00D5F6C0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD32C0D2656DE1B00D5F6C0 /* LoginViewModel.swift */; };
+		CFD32C132656DE2600D5F6C0 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD32C122656DE2600D5F6C0 /* LoginService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFD32BDF2656D7E600D5F6C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFD32BC02656D7DC00D5F6C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFD32BC72656D7DC00D5F6C0;
+			remoteInfo = PizzaOrder;
+		};
+		CFD32BEA2656D7E600D5F6C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFD32BC02656D7DC00D5F6C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFD32BC72656D7DC00D5F6C0;
+			remoteInfo = PizzaOrder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BCEF215B4D91EA952C94677 /* Pods-PizzaOrder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaOrder.release.xcconfig"; path = "Target Support Files/Pods-PizzaOrder/Pods-PizzaOrder.release.xcconfig"; sourceTree = "<group>"; };
+		45565EC565E6FAC84600DE2E /* Pods-PizzaOrder-PizzaOrderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaOrder-PizzaOrderUITests.debug.xcconfig"; path = "Target Support Files/Pods-PizzaOrder-PizzaOrderUITests/Pods-PizzaOrder-PizzaOrderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		48A5A761E5A2CF65D29C78B8 /* Pods_PizzaOrderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizzaOrderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B14C7154E2FA9983ED9BB97 /* Pods-PizzaOrder-PizzaOrderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaOrder-PizzaOrderUITests.release.xcconfig"; path = "Target Support Files/Pods-PizzaOrder-PizzaOrderUITests/Pods-PizzaOrder-PizzaOrderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		57163AC9B88C7850B716B414 /* Pods_PizzaOrder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizzaOrder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C329AA0FA485E04E33CC71 /* Pods-PizzaOrderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaOrderTests.debug.xcconfig"; path = "Target Support Files/Pods-PizzaOrderTests/Pods-PizzaOrderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B86BBD4FFED6DC9181A354D1 /* Pods_PizzaOrder_PizzaOrderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizzaOrder_PizzaOrderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93E96A01395EFA32B2FE8E9 /* Pods-PizzaOrderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaOrderTests.release.xcconfig"; path = "Target Support Files/Pods-PizzaOrderTests/Pods-PizzaOrderTests.release.xcconfig"; sourceTree = "<group>"; };
+		CFD2AEFE2656E49100756268 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		CFD2AF072656EE7500756268 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CFD2AF0F2656EEA100756268 /* Constants+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Keys.swift"; sourceTree = "<group>"; };
+		CFD32BC82656D7DC00D5F6C0 /* PizzaOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD32BCB2656D7DC00D5F6C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFD32BD42656D7E500D5F6C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFD32BD72656D7E500D5F6C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFD32BD92656D7E500D5F6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD32BDE2656D7E600D5F6C0 /* PizzaOrderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaOrderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD32BE22656D7E600D5F6C0 /* PizzaOrderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaOrderTests.swift; sourceTree = "<group>"; };
+		CFD32BE42656D7E600D5F6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD32BE92656D7E600D5F6C0 /* PizzaOrderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaOrderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD32BED2656D7E600D5F6C0 /* PizzaOrderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaOrderUITests.swift; sourceTree = "<group>"; };
+		CFD32BEF2656D7E600D5F6C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD32C032656D8F500D5F6C0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CFD32C042656D8F500D5F6C0 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CFD32C0D2656DE1B00D5F6C0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CFD32C122656DE2600D5F6C0 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		EAA3E8BD9C80FD7FA0D0EEB0 /* Pods-PizzaOrder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaOrder.debug.xcconfig"; path = "Target Support Files/Pods-PizzaOrder/Pods-PizzaOrder.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFD32BC52656D7DC00D5F6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76E07833EF9FD8A8152A5786 /* Pods_PizzaOrder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFD32BDB2656D7E600D5F6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4A03A3C8EE865154482DC4 /* Pods_PizzaOrderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFD32BE62656D7E600D5F6C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3284D7D4F83F8FF0066AD628 /* Pods_PizzaOrder_PizzaOrderUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A406E136D53F034B231AD85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57163AC9B88C7850B716B414 /* Pods_PizzaOrder.framework */,
+				B86BBD4FFED6DC9181A354D1 /* Pods_PizzaOrder_PizzaOrderUITests.framework */,
+				48A5A761E5A2CF65D29C78B8 /* Pods_PizzaOrderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFD2AEFD2656E46E00756268 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFD2AEFE2656E49100756268 /* Login.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CFD2AF062656EE6900756268 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CFD2AF072656EE7500756268 /* Constants.swift */,
+				CFD2AF0F2656EEA100756268 /* Constants+Keys.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CFD32BBF2656D7DC00D5F6C0 = {
+			isa = PBXGroup;
+			children = (
+				CFD32BCA2656D7DC00D5F6C0 /* PizzaOrder */,
+				CFD32BE12656D7E600D5F6C0 /* PizzaOrderTests */,
+				CFD32BEC2656D7E600D5F6C0 /* PizzaOrderUITests */,
+				CFD32BC92656D7DC00D5F6C0 /* Products */,
+				E7FF8B491B066FE697849E98 /* Pods */,
+				6A406E136D53F034B231AD85 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CFD32BC92656D7DC00D5F6C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFD32BC82656D7DC00D5F6C0 /* PizzaOrder.app */,
+				CFD32BDE2656D7E600D5F6C0 /* PizzaOrderTests.xctest */,
+				CFD32BE92656D7E600D5F6C0 /* PizzaOrderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFD32BCA2656D7DC00D5F6C0 /* PizzaOrder */ = {
+			isa = PBXGroup;
+			children = (
+				CFD2AF062656EE6900756268 /* Constants */,
+				CFD2AEFD2656E46E00756268 /* Models */,
+				CFD32C012656D8AA00D5F6C0 /* Views */,
+				CFD32BCB2656D7DC00D5F6C0 /* AppDelegate.swift */,
+				CFD32BD42656D7E500D5F6C0 /* Assets.xcassets */,
+				CFD32BD62656D7E500D5F6C0 /* LaunchScreen.storyboard */,
+				CFD32BD92656D7E500D5F6C0 /* Info.plist */,
+			);
+			path = PizzaOrder;
+			sourceTree = "<group>";
+		};
+		CFD32BE12656D7E600D5F6C0 /* PizzaOrderTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFD32BE22656D7E600D5F6C0 /* PizzaOrderTests.swift */,
+				CFD32BE42656D7E600D5F6C0 /* Info.plist */,
+			);
+			path = PizzaOrderTests;
+			sourceTree = "<group>";
+		};
+		CFD32BEC2656D7E600D5F6C0 /* PizzaOrderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFD32BED2656D7E600D5F6C0 /* PizzaOrderUITests.swift */,
+				CFD32BEF2656D7E600D5F6C0 /* Info.plist */,
+			);
+			path = PizzaOrderUITests;
+			sourceTree = "<group>";
+		};
+		CFD32C012656D8AA00D5F6C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CFD32C022656D8EA00D5F6C0 /* Login */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CFD32C022656D8EA00D5F6C0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CFD32C032656D8F500D5F6C0 /* LoginViewController.swift */,
+				CFD32C042656D8F500D5F6C0 /* LoginViewController.xib */,
+				CFD32C0D2656DE1B00D5F6C0 /* LoginViewModel.swift */,
+				CFD32C122656DE2600D5F6C0 /* LoginService.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E7FF8B491B066FE697849E98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EAA3E8BD9C80FD7FA0D0EEB0 /* Pods-PizzaOrder.debug.xcconfig */,
+				0BCEF215B4D91EA952C94677 /* Pods-PizzaOrder.release.xcconfig */,
+				45565EC565E6FAC84600DE2E /* Pods-PizzaOrder-PizzaOrderUITests.debug.xcconfig */,
+				4B14C7154E2FA9983ED9BB97 /* Pods-PizzaOrder-PizzaOrderUITests.release.xcconfig */,
+				88C329AA0FA485E04E33CC71 /* Pods-PizzaOrderTests.debug.xcconfig */,
+				B93E96A01395EFA32B2FE8E9 /* Pods-PizzaOrderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFD32BC72656D7DC00D5F6C0 /* PizzaOrder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFD32BF22656D7E600D5F6C0 /* Build configuration list for PBXNativeTarget "PizzaOrder" */;
+			buildPhases = (
+				1D31B0FA5284D8C4EEB48300 /* [CP] Check Pods Manifest.lock */,
+				CFD32BC42656D7DC00D5F6C0 /* Sources */,
+				CFD32BC52656D7DC00D5F6C0 /* Frameworks */,
+				CFD32BC62656D7DC00D5F6C0 /* Resources */,
+				6B19F8A96325554B48CEFE4C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PizzaOrder;
+			productName = PizzaOrder;
+			productReference = CFD32BC82656D7DC00D5F6C0 /* PizzaOrder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFD32BDD2656D7E600D5F6C0 /* PizzaOrderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFD32BF52656D7E600D5F6C0 /* Build configuration list for PBXNativeTarget "PizzaOrderTests" */;
+			buildPhases = (
+				FBA267574DBFD94E04DF39E0 /* [CP] Check Pods Manifest.lock */,
+				CFD32BDA2656D7E600D5F6C0 /* Sources */,
+				CFD32BDB2656D7E600D5F6C0 /* Frameworks */,
+				CFD32BDC2656D7E600D5F6C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFD32BE02656D7E600D5F6C0 /* PBXTargetDependency */,
+			);
+			name = PizzaOrderTests;
+			productName = PizzaOrderTests;
+			productReference = CFD32BDE2656D7E600D5F6C0 /* PizzaOrderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CFD32BE82656D7E600D5F6C0 /* PizzaOrderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFD32BF82656D7E600D5F6C0 /* Build configuration list for PBXNativeTarget "PizzaOrderUITests" */;
+			buildPhases = (
+				A908C57A74758D96054BC5A6 /* [CP] Check Pods Manifest.lock */,
+				CFD32BE52656D7E600D5F6C0 /* Sources */,
+				CFD32BE62656D7E600D5F6C0 /* Frameworks */,
+				CFD32BE72656D7E600D5F6C0 /* Resources */,
+				A05564C9A141D5A8A3A1FC74 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFD32BEB2656D7E600D5F6C0 /* PBXTargetDependency */,
+			);
+			name = PizzaOrderUITests;
+			productName = PizzaOrderUITests;
+			productReference = CFD32BE92656D7E600D5F6C0 /* PizzaOrderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFD32BC02656D7DC00D5F6C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					CFD32BC72656D7DC00D5F6C0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					CFD32BDD2656D7E600D5F6C0 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CFD32BC72656D7DC00D5F6C0;
+					};
+					CFD32BE82656D7E600D5F6C0 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CFD32BC72656D7DC00D5F6C0;
+					};
+				};
+			};
+			buildConfigurationList = CFD32BC32656D7DC00D5F6C0 /* Build configuration list for PBXProject "PizzaOrder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFD32BBF2656D7DC00D5F6C0;
+			productRefGroup = CFD32BC92656D7DC00D5F6C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFD32BC72656D7DC00D5F6C0 /* PizzaOrder */,
+				CFD32BDD2656D7E600D5F6C0 /* PizzaOrderTests */,
+				CFD32BE82656D7E600D5F6C0 /* PizzaOrderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFD32BC62656D7DC00D5F6C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD32BD82656D7E500D5F6C0 /* LaunchScreen.storyboard in Resources */,
+				CFD32BD52656D7E500D5F6C0 /* Assets.xcassets in Resources */,
+				CFD32C062656D8F500D5F6C0 /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFD32BDC2656D7E600D5F6C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFD32BE72656D7E600D5F6C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D31B0FA5284D8C4EEB48300 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PizzaOrder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B19F8A96325554B48CEFE4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PizzaOrder/Pods-PizzaOrder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PizzaOrder/Pods-PizzaOrder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PizzaOrder/Pods-PizzaOrder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A05564C9A141D5A8A3A1FC74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PizzaOrder-PizzaOrderUITests/Pods-PizzaOrder-PizzaOrderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PizzaOrder-PizzaOrderUITests/Pods-PizzaOrder-PizzaOrderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PizzaOrder-PizzaOrderUITests/Pods-PizzaOrder-PizzaOrderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A908C57A74758D96054BC5A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PizzaOrder-PizzaOrderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBA267574DBFD94E04DF39E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PizzaOrderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFD32BC42656D7DC00D5F6C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD32C052656D8F500D5F6C0 /* LoginViewController.swift in Sources */,
+				CFD2AEFF2656E49100756268 /* Login.swift in Sources */,
+				CFD32BCC2656D7DC00D5F6C0 /* AppDelegate.swift in Sources */,
+				CFD32C0E2656DE1B00D5F6C0 /* LoginViewModel.swift in Sources */,
+				CFD32C132656DE2600D5F6C0 /* LoginService.swift in Sources */,
+				CFD2AF102656EEA100756268 /* Constants+Keys.swift in Sources */,
+				CFD2AF082656EE7500756268 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFD32BDA2656D7E600D5F6C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD32BE32656D7E600D5F6C0 /* PizzaOrderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFD32BE52656D7E600D5F6C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD32BEE2656D7E600D5F6C0 /* PizzaOrderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFD32BE02656D7E600D5F6C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFD32BC72656D7DC00D5F6C0 /* PizzaOrder */;
+			targetProxy = CFD32BDF2656D7E600D5F6C0 /* PBXContainerItemProxy */;
+		};
+		CFD32BEB2656D7E600D5F6C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFD32BC72656D7DC00D5F6C0 /* PizzaOrder */;
+			targetProxy = CFD32BEA2656D7E600D5F6C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CFD32BD62656D7E500D5F6C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFD32BD72656D7E500D5F6C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFD32BF02656D7E600D5F6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFD32BF12656D7E600D5F6C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFD32BF32656D7E600D5F6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAA3E8BD9C80FD7FA0D0EEB0 /* Pods-PizzaOrder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYFPD222J2;
+				INFOPLIST_FILE = PizzaOrder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapha.PizzaOrder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFD32BF42656D7E600D5F6C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BCEF215B4D91EA952C94677 /* Pods-PizzaOrder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYFPD222J2;
+				INFOPLIST_FILE = PizzaOrder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapha.PizzaOrder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CFD32BF62656D7E600D5F6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88C329AA0FA485E04E33CC71 /* Pods-PizzaOrderTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYFPD222J2;
+				INFOPLIST_FILE = PizzaOrderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapha.PizzaOrderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PizzaOrder.app/PizzaOrder";
+			};
+			name = Debug;
+		};
+		CFD32BF72656D7E600D5F6C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B93E96A01395EFA32B2FE8E9 /* Pods-PizzaOrderTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYFPD222J2;
+				INFOPLIST_FILE = PizzaOrderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapha.PizzaOrderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PizzaOrder.app/PizzaOrder";
+			};
+			name = Release;
+		};
+		CFD32BF92656D7E600D5F6C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45565EC565E6FAC84600DE2E /* Pods-PizzaOrder-PizzaOrderUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYFPD222J2;
+				INFOPLIST_FILE = PizzaOrderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapha.PizzaOrderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PizzaOrder;
+			};
+			name = Debug;
+		};
+		CFD32BFA2656D7E600D5F6C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B14C7154E2FA9983ED9BB97 /* Pods-PizzaOrder-PizzaOrderUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AYFPD222J2;
+				INFOPLIST_FILE = PizzaOrderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rapha.PizzaOrderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PizzaOrder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFD32BC32656D7DC00D5F6C0 /* Build configuration list for PBXProject "PizzaOrder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFD32BF02656D7E600D5F6C0 /* Debug */,
+				CFD32BF12656D7E600D5F6C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFD32BF22656D7E600D5F6C0 /* Build configuration list for PBXNativeTarget "PizzaOrder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFD32BF32656D7E600D5F6C0 /* Debug */,
+				CFD32BF42656D7E600D5F6C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFD32BF52656D7E600D5F6C0 /* Build configuration list for PBXNativeTarget "PizzaOrderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFD32BF62656D7E600D5F6C0 /* Debug */,
+				CFD32BF72656D7E600D5F6C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFD32BF82656D7E600D5F6C0 /* Build configuration list for PBXNativeTarget "PizzaOrderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFD32BF92656D7E600D5F6C0 /* Debug */,
+				CFD32BFA2656D7E600D5F6C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFD32BC02656D7DC00D5F6C0 /* Project object */;
+}
