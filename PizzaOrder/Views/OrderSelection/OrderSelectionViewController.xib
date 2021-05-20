@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderSelectionViewController" customModule="PizzaOrder" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="IVu-4m-CU1" id="2S6-LG-Uaz"/>
+                <outlet property="searchBar" destination="iKQ-jp-3eR" id="zcE-RS-lnY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Buscar" translatesAutoresizingMaskIntoConstraints="NO" id="iKQ-jp-3eR">
+                    <rect key="frame" x="0.0" y="8" width="320" height="56"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IVu-4m-CU1">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EGe-wN-iOD">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="iKQ-jp-3eR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2ov-g5-isD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IVu-4m-CU1" secondAttribute="trailing" id="50i-og-1lb"/>
+                <constraint firstAttribute="bottom" secondItem="IVu-4m-CU1" secondAttribute="bottom" id="cAU-TO-cQH"/>
+                <constraint firstItem="iKQ-jp-3eR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="jKR-0b-XEN"/>
+                <constraint firstItem="IVu-4m-CU1" firstAttribute="top" secondItem="iKQ-jp-3eR" secondAttribute="bottom" id="nWa-NE-Kqw"/>
+                <constraint firstItem="IVu-4m-CU1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pIO-zw-Awg"/>
+                <constraint firstItem="iKQ-jp-3eR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="pxt-24-1k9"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="149"/>
+        </view>
+    </objects>
+</document>

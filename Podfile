@@ -3,6 +3,7 @@ target 'PizzaOrder' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'SkeletonView'  
 
   target 'PizzaOrderTests' do
     inherit! :search_paths

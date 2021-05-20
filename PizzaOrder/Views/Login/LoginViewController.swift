@@ -49,6 +49,12 @@ class LoginViewController: UIViewController {
             }
             
             self?.viewModel.saveLogin(login)
+            self?.openSelectOrder()
         }
+    }
+    
+    func openSelectOrder() {
+        let vc = OrderSelectionViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
