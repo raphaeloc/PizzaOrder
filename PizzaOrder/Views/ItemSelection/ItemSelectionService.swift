@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class OrderSelectionService {
+class ItemSelectionService {
     
     let url = "https://p3teufi0k9.execute-api.us-east-1.amazonaws.com/v1/pizza"
     

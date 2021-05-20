@@ -12,16 +12,21 @@
 		AA4A03A3C8EE865154482DC4 /* Pods_PizzaOrderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48A5A761E5A2CF65D29C78B8 /* Pods_PizzaOrderTests.framework */; };
 		CF50182A265707AA00CA44F9 /* TitleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF501828265707A900CA44F9 /* TitleCollectionReusableView.swift */; };
 		CF50182B265707AA00CA44F9 /* TitleCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF501829265707A900CA44F9 /* TitleCollectionReusableView.xib */; };
+		CF50183526570C2200CA44F9 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50183326570C2200CA44F9 /* ItemDetailsViewController.swift */; };
+		CF50183626570C2200CA44F9 /* ItemDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF50183426570C2200CA44F9 /* ItemDetailsViewController.xib */; };
+		CF50184526571A1600CA44F9 /* SizeSelectStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50184426571A1600CA44F9 /* SizeSelectStackView.swift */; };
+		CF50184E26571ACD00CA44F9 /* SizeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50184D26571ACD00CA44F9 /* SizeSelectView.swift */; };
+		CF501853265721F600CA44F9 /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF501852265721F600CA44F9 /* ItemDetailsViewModel.swift */; };
 		CFD2AEFF2656E49100756268 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AEFE2656E49100756268 /* Login.swift */; };
 		CFD2AF082656EE7500756268 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF072656EE7500756268 /* Constants.swift */; };
 		CFD2AF102656EEA100756268 /* Constants+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF0F2656EEA100756268 /* Constants+Keys.swift */; };
-		CFD2AF172656F00A00756268 /* OrderSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF152656F00A00756268 /* OrderSelectionViewController.swift */; };
-		CFD2AF182656F00A00756268 /* OrderSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD2AF162656F00A00756268 /* OrderSelectionViewController.xib */; };
-		CFD2AF202656F01900756268 /* OrderSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF1F2656F01900756268 /* OrderSelectionViewModel.swift */; };
-		CFD2AF252656F02300756268 /* OrderSelectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF242656F02300756268 /* OrderSelectionService.swift */; };
+		CFD2AF172656F00A00756268 /* ItemSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF152656F00A00756268 /* ItemSelectionViewController.swift */; };
+		CFD2AF182656F00A00756268 /* ItemSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD2AF162656F00A00756268 /* ItemSelectionViewController.xib */; };
+		CFD2AF202656F01900756268 /* ItemSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF1F2656F01900756268 /* ItemSelectionViewModel.swift */; };
+		CFD2AF252656F02300756268 /* ItemSelectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF242656F02300756268 /* ItemSelectionService.swift */; };
 		CFD2AF2B2656F36600756268 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF2A2656F36600756268 /* UIColor+Utils.swift */; };
-		CFD2AF352656F46900756268 /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF332656F46900756268 /* OrderCollectionViewCell.swift */; };
-		CFD2AF362656F46900756268 /* OrderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD2AF342656F46900756268 /* OrderCollectionViewCell.xib */; };
+		CFD2AF352656F46900756268 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF332656F46900756268 /* ItemCollectionViewCell.swift */; };
+		CFD2AF362656F46900756268 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFD2AF342656F46900756268 /* ItemCollectionViewCell.xib */; };
 		CFD2AF3F2656F56C00756268 /* RatingStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF3E2656F56C00756268 /* RatingStackView.swift */; };
 		CFD2AF4B2656F8A200756268 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF4A2656F8A200756268 /* Item.swift */; };
 		CFD2AF502656F91600756268 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF4F2656F91600756268 /* UIImageView+Download.swift */; };
@@ -66,16 +71,21 @@
 		B93E96A01395EFA32B2FE8E9 /* Pods-PizzaOrderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaOrderTests.release.xcconfig"; path = "Target Support Files/Pods-PizzaOrderTests/Pods-PizzaOrderTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF501828265707A900CA44F9 /* TitleCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionReusableView.swift; sourceTree = "<group>"; };
 		CF501829265707A900CA44F9 /* TitleCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionReusableView.xib; sourceTree = "<group>"; };
+		CF50183326570C2200CA44F9 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
+		CF50183426570C2200CA44F9 /* ItemDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemDetailsViewController.xib; sourceTree = "<group>"; };
+		CF50184426571A1600CA44F9 /* SizeSelectStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectStackView.swift; sourceTree = "<group>"; };
+		CF50184D26571ACD00CA44F9 /* SizeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectView.swift; sourceTree = "<group>"; };
+		CF501852265721F600CA44F9 /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
 		CFD2AEFE2656E49100756268 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		CFD2AF072656EE7500756268 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFD2AF0F2656EEA100756268 /* Constants+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Keys.swift"; sourceTree = "<group>"; };
-		CFD2AF152656F00A00756268 /* OrderSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSelectionViewController.swift; sourceTree = "<group>"; };
-		CFD2AF162656F00A00756268 /* OrderSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSelectionViewController.xib; sourceTree = "<group>"; };
-		CFD2AF1F2656F01900756268 /* OrderSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSelectionViewModel.swift; sourceTree = "<group>"; };
-		CFD2AF242656F02300756268 /* OrderSelectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSelectionService.swift; sourceTree = "<group>"; };
+		CFD2AF152656F00A00756268 /* ItemSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionViewController.swift; sourceTree = "<group>"; };
+		CFD2AF162656F00A00756268 /* ItemSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemSelectionViewController.xib; sourceTree = "<group>"; };
+		CFD2AF1F2656F01900756268 /* ItemSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionViewModel.swift; sourceTree = "<group>"; };
+		CFD2AF242656F02300756268 /* ItemSelectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSelectionService.swift; sourceTree = "<group>"; };
 		CFD2AF2A2656F36600756268 /* UIColor+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
-		CFD2AF332656F46900756268 /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
-		CFD2AF342656F46900756268 /* OrderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCollectionViewCell.xib; sourceTree = "<group>"; };
+		CFD2AF332656F46900756268 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		CFD2AF342656F46900756268 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		CFD2AF3E2656F56C00756268 /* RatingStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingStackView.swift; sourceTree = "<group>"; };
 		CFD2AF4A2656F8A200756268 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CFD2AF4F2656F91600756268 /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
@@ -146,6 +156,32 @@
 			path = TitleCell;
 			sourceTree = "<group>";
 		};
+		CF50183226570C0E00CA44F9 /* ItemDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CF50183326570C2200CA44F9 /* ItemDetailsViewController.swift */,
+				CF50183426570C2200CA44F9 /* ItemDetailsViewController.xib */,
+				CF501852265721F600CA44F9 /* ItemDetailsViewModel.swift */,
+			);
+			path = ItemDetails;
+			sourceTree = "<group>";
+		};
+		CF501843265719F600CA44F9 /* SizeSelectStackView */ = {
+			isa = PBXGroup;
+			children = (
+				CF50184426571A1600CA44F9 /* SizeSelectStackView.swift */,
+			);
+			path = SizeSelectStackView;
+			sourceTree = "<group>";
+		};
+		CF50184C26571AB600CA44F9 /* SizeSelectView */ = {
+			isa = PBXGroup;
+			children = (
+				CF50184D26571ACD00CA44F9 /* SizeSelectView.swift */,
+			);
+			path = SizeSelectView;
+			sourceTree = "<group>";
+		};
 		CFD2AEFD2656E46E00756268 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,15 +200,15 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		CFD2AF142656EFF500756268 /* OrderSelection */ = {
+		CFD2AF142656EFF500756268 /* ItemSelection */ = {
 			isa = PBXGroup;
 			children = (
-				CFD2AF152656F00A00756268 /* OrderSelectionViewController.swift */,
-				CFD2AF162656F00A00756268 /* OrderSelectionViewController.xib */,
-				CFD2AF1F2656F01900756268 /* OrderSelectionViewModel.swift */,
-				CFD2AF242656F02300756268 /* OrderSelectionService.swift */,
+				CFD2AF152656F00A00756268 /* ItemSelectionViewController.swift */,
+				CFD2AF162656F00A00756268 /* ItemSelectionViewController.xib */,
+				CFD2AF1F2656F01900756268 /* ItemSelectionViewModel.swift */,
+				CFD2AF242656F02300756268 /* ItemSelectionService.swift */,
 			);
-			path = OrderSelection;
+			path = ItemSelection;
 			sourceTree = "<group>";
 		};
 		CFD2AF292656F35400756268 /* Extensions */ = {
@@ -186,13 +222,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CFD2AF322656F45400756268 /* OrderCell */ = {
+		CFD2AF322656F45400756268 /* ItemCell */ = {
 			isa = PBXGroup;
 			children = (
-				CFD2AF332656F46900756268 /* OrderCollectionViewCell.swift */,
-				CFD2AF342656F46900756268 /* OrderCollectionViewCell.xib */,
+				CFD2AF332656F46900756268 /* ItemCollectionViewCell.swift */,
+				CFD2AF342656F46900756268 /* ItemCollectionViewCell.xib */,
 			);
-			path = OrderCell;
+			path = ItemCell;
 			sourceTree = "<group>";
 		};
 		CFD2AF3D2656F55400756268 /* RatingStackView */ = {
@@ -261,10 +297,13 @@
 		CFD32C012656D8AA00D5F6C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF50184C26571AB600CA44F9 /* SizeSelectView */,
+				CF501843265719F600CA44F9 /* SizeSelectStackView */,
+				CF50183226570C0E00CA44F9 /* ItemDetails */,
 				CF5018272657078E00CA44F9 /* TitleCell */,
 				CFD2AF3D2656F55400756268 /* RatingStackView */,
-				CFD2AF322656F45400756268 /* OrderCell */,
-				CFD2AF142656EFF500756268 /* OrderSelection */,
+				CFD2AF322656F45400756268 /* ItemCell */,
+				CFD2AF142656EFF500756268 /* ItemSelection */,
 				CFD32C022656D8EA00D5F6C0 /* Login */,
 			);
 			path = Views;
@@ -402,12 +441,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD2AF182656F00A00756268 /* OrderSelectionViewController.xib in Resources */,
+				CFD2AF182656F00A00756268 /* ItemSelectionViewController.xib in Resources */,
+				CF50183626570C2200CA44F9 /* ItemDetailsViewController.xib in Resources */,
 				CFD32BD82656D7E500D5F6C0 /* LaunchScreen.storyboard in Resources */,
 				CFD32BD52656D7E500D5F6C0 /* Assets.xcassets in Resources */,
 				CFD32C062656D8F500D5F6C0 /* LoginViewController.xib in Resources */,
 				CF50182B265707AA00CA44F9 /* TitleCollectionReusableView.xib in Resources */,
-				CFD2AF362656F46900756268 /* OrderCollectionViewCell.xib in Resources */,
+				CFD2AF362656F46900756268 /* ItemCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,24 +575,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF50184E26571ACD00CA44F9 /* SizeSelectView.swift in Sources */,
 				CFD2AF552656F9BB00756268 /* UIView+Utils.swift in Sources */,
 				CFD32C052656D8F500D5F6C0 /* LoginViewController.swift in Sources */,
 				CFD2AEFF2656E49100756268 /* Login.swift in Sources */,
 				CFD32BCC2656D7DC00D5F6C0 /* AppDelegate.swift in Sources */,
-				CFD2AF252656F02300756268 /* OrderSelectionService.swift in Sources */,
+				CFD2AF252656F02300756268 /* ItemSelectionService.swift in Sources */,
 				CFD2AF5A2656FA1800756268 /* UICollectionView+Utils.swift in Sources */,
 				CFD2AF4B2656F8A200756268 /* Item.swift in Sources */,
+				CF50183526570C2200CA44F9 /* ItemDetailsViewController.swift in Sources */,
 				CFD32C0E2656DE1B00D5F6C0 /* LoginViewModel.swift in Sources */,
 				CF50182A265707AA00CA44F9 /* TitleCollectionReusableView.swift in Sources */,
 				CFD32C132656DE2600D5F6C0 /* LoginService.swift in Sources */,
 				CFD2AF2B2656F36600756268 /* UIColor+Utils.swift in Sources */,
-				CFD2AF352656F46900756268 /* OrderCollectionViewCell.swift in Sources */,
+				CFD2AF352656F46900756268 /* ItemCollectionViewCell.swift in Sources */,
 				CFD2AF102656EEA100756268 /* Constants+Keys.swift in Sources */,
 				CFD2AF3F2656F56C00756268 /* RatingStackView.swift in Sources */,
-				CFD2AF172656F00A00756268 /* OrderSelectionViewController.swift in Sources */,
+				CFD2AF172656F00A00756268 /* ItemSelectionViewController.swift in Sources */,
+				CF50184526571A1600CA44F9 /* SizeSelectStackView.swift in Sources */,
+				CF501853265721F600CA44F9 /* ItemDetailsViewModel.swift in Sources */,
 				CFD2AF502656F91600756268 /* UIImageView+Download.swift in Sources */,
 				CFD2AF082656EE7500756268 /* Constants.swift in Sources */,
-				CFD2AF202656F01900756268 /* OrderSelectionViewModel.swift in Sources */,
+				CFD2AF202656F01900756268 /* ItemSelectionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

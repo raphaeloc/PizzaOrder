@@ -8,7 +8,7 @@
 import UIKit
 import SkeletonView
 
-class OrderCollectionViewCell: UICollectionViewCell {
+class ItemCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -39,6 +39,7 @@ class OrderCollectionViewCell: UICollectionViewCell {
 
     func setup(withItem item: Item) {
         imageView.downloaded(from: item.imageUrl)
+        imageView.contentMode = .scaleToFill
         nameLabel.text = item.name
         priceLabel.text = String(format: "R$ %.02f", item.priceP).replacingOccurrences(of: ".", with: ",")
         ratingStackView.rating = item.rating

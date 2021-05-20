@@ -7,16 +7,16 @@
 
 import UIKit
 
-class OrderSelectionViewController: UIViewController {
+class ItemSelectionViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let viewModel: OrderSelectionViewModel
+    let viewModel: ItemSelectionViewModel
     
     init() {
-        viewModel = OrderSelectionViewModel()
-        super.init(nibName: String(describing: OrderSelectionViewController.self), bundle: nil)
+        viewModel = ItemSelectionViewModel()
+        super.init(nibName: String(describing: ItemSelectionViewController.self), bundle: nil)
         viewModel.delegate = self
     }
     
@@ -33,14 +33,22 @@ class OrderSelectionViewController: UIViewController {
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(OrderCollectionViewCell.self)
+        collectionView.isScrollEnabled = false
+        collectionView.isUserInteractionEnabled = false
+        collectionView.register(ItemCollectionViewCell.self)
         collectionView.registerHeader(TitleCollectionReusableView.self)
         
         (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionHeadersPinToVisibleBounds = true
     }
 }
 
-extension OrderSelectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ItemSelectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = viewModel.item(at: indexPath.row)
+        let vc = ItemDetailsViewController(withItem: item)
+        present(vc, animated: true, completion: nil)
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -56,7 +64,7 @@ extension OrderSelectionViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(of: OrderCollectionViewCell.self, for: indexPath) { [unowned self] cell in
+        let cell = collectionView.dequeueReusableCell(of: ItemCollectionViewCell.self, for: indexPath) { [unowned self] cell in
             if viewModel.isFetching {
                 cell.setupForSkeleton()
             } else {
@@ -74,20 +82,23 @@ extension OrderSelectionViewController: UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 50)
+        let height: CGFloat = viewModel.isFetching ? 0 : 50
+        return CGSize(width: collectionView.frame.width, height: height)
     }
 }
 
-extension OrderSelectionViewController: OrderSelectionViewModelDelegate {
+extension ItemSelectionViewController: ItemSelectionViewModelDelegate {
     
-    func orderSelectionViewModelDidUpdatedItems() {
+    func itemSelectionViewModelDidUpdatedItems() {
         DispatchQueue.main.async {
+            self.collectionView.isScrollEnabled = true
+            self.collectionView.isUserInteractionEnabled = true
             self.collectionView.reloadData()
         }
     }
 }
 
-extension OrderSelectionViewController: UISearchBarDelegate {
+extension ItemSelectionViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.didChangeText(searchBar.searchTextField)

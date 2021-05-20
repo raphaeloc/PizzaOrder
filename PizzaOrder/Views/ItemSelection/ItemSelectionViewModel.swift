@@ -7,20 +7,20 @@
 
 import UIKit
 
-protocol OrderSelectionViewModelDelegate: class {
-    func orderSelectionViewModelDidUpdatedItems()
+protocol ItemSelectionViewModelDelegate: class {
+    func itemSelectionViewModelDidUpdatedItems()
 }
 
-class OrderSelectionViewModel {
+class ItemSelectionViewModel {
     
-    let service: OrderSelectionService
+    let service: ItemSelectionService
     
-    weak var delegate: OrderSelectionViewModelDelegate?
+    weak var delegate: ItemSelectionViewModelDelegate?
     
     var isFetching = true
     var filteredItems = Items() {
         didSet {
-            delegate?.orderSelectionViewModelDidUpdatedItems()
+            delegate?.itemSelectionViewModelDidUpdatedItems()
         }
     }
     var items = Items() {
@@ -34,7 +34,7 @@ class OrderSelectionViewModel {
     }
     
     init() {
-        service = OrderSelectionService()
+        service = ItemSelectionService()
         fetchItems()
     }
     
@@ -53,7 +53,6 @@ class OrderSelectionViewModel {
             }
             
             self?.isFetching = false
-            
             self?.items = decodedData.sorted(by: { $1.rating < $0.rating })
         }
     }

@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: false)
         userTextfield.text = UserDefaults().string(forKey: Constants.Keys.loginUserDefaultsKey)
+        loginButton.layer.cornerRadius = 10
     }
     
     @IBAction func didTapLoginButton(_ sender: Any) {
@@ -54,7 +55,7 @@ class LoginViewController: UIViewController {
     }
     
     func openSelectOrder() {
-        let vc = OrderSelectionViewController()
+        let vc = ItemSelectionViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
 }
