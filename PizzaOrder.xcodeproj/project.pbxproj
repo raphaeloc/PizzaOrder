@@ -17,6 +17,7 @@
 		CF50184526571A1600CA44F9 /* SizeSelectStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50184426571A1600CA44F9 /* SizeSelectStackView.swift */; };
 		CF50184E26571ACD00CA44F9 /* SizeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50184D26571ACD00CA44F9 /* SizeSelectView.swift */; };
 		CF501853265721F600CA44F9 /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF501852265721F600CA44F9 /* ItemDetailsViewModel.swift */; };
+		CF5018682657293A00CA44F9 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5018672657293A00CA44F9 /* SpinnerView.swift */; };
 		CFD2AEFF2656E49100756268 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AEFE2656E49100756268 /* Login.swift */; };
 		CFD2AF082656EE7500756268 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF072656EE7500756268 /* Constants.swift */; };
 		CFD2AF102656EEA100756268 /* Constants+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF0F2656EEA100756268 /* Constants+Keys.swift */; };
@@ -76,6 +77,7 @@
 		CF50184426571A1600CA44F9 /* SizeSelectStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectStackView.swift; sourceTree = "<group>"; };
 		CF50184D26571ACD00CA44F9 /* SizeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectView.swift; sourceTree = "<group>"; };
 		CF501852265721F600CA44F9 /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
+		CF5018672657293A00CA44F9 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		CFD2AEFE2656E49100756268 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		CFD2AF072656EE7500756268 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFD2AF0F2656EEA100756268 /* Constants+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Keys.swift"; sourceTree = "<group>"; };
@@ -180,6 +182,14 @@
 				CF50184D26571ACD00CA44F9 /* SizeSelectView.swift */,
 			);
 			path = SizeSelectView;
+			sourceTree = "<group>";
+		};
+		CF5018662657292A00CA44F9 /* SpinnerView */ = {
+			isa = PBXGroup;
+			children = (
+				CF5018672657293A00CA44F9 /* SpinnerView.swift */,
+			);
+			path = SpinnerView;
 			sourceTree = "<group>";
 		};
 		CFD2AEFD2656E46E00756268 /* Models */ = {
@@ -297,6 +307,7 @@
 		CFD32C012656D8AA00D5F6C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CF5018662657292A00CA44F9 /* SpinnerView */,
 				CF50184C26571AB600CA44F9 /* SizeSelectView */,
 				CF501843265719F600CA44F9 /* SizeSelectStackView */,
 				CF50183226570C0E00CA44F9 /* ItemDetails */,
@@ -577,6 +588,7 @@
 			files = (
 				CF50184E26571ACD00CA44F9 /* SizeSelectView.swift in Sources */,
 				CFD2AF552656F9BB00756268 /* UIView+Utils.swift in Sources */,
+				CF5018682657293A00CA44F9 /* SpinnerView.swift in Sources */,
 				CFD32C052656D8F500D5F6C0 /* LoginViewController.swift in Sources */,
 				CFD2AEFF2656E49100756268 /* Login.swift in Sources */,
 				CFD32BCC2656D7DC00D5F6C0 /* AppDelegate.swift in Sources */,

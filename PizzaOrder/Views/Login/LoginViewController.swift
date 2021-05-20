@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     
     let viewModel: LoginViewModel
     
+    lazy var spinnerView = SpinnerView(forParent: view)
+    
     init() {
         viewModel = LoginViewModel()
         super.init(nibName: String(describing: LoginViewController.self), bundle: nil)
@@ -40,6 +42,7 @@ class LoginViewController: UIViewController {
             return
         }
         
+        spinnerView.show()
         viewModel.doLogin(withLogin: login, password: password) { [weak self] result in
             guard result else {
                 let alert = UIAlertController(title: "Erro", message: "Login ou senha inválidos, tente novamente.", preferredStyle: .alert)
@@ -51,6 +54,7 @@ class LoginViewController: UIViewController {
             
             self?.viewModel.saveLogin(login)
             self?.openSelectOrder()
+            self?.spinnerView.hide()
         }
     }
     
