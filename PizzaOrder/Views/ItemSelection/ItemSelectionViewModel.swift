@@ -38,12 +38,12 @@ class ItemSelectionViewModel {
         fetchItems()
     }
     
-    func didChangeText(_ sender: UISearchTextField) {
-        guard let text = sender.text, !text.isEmpty else {
+    func didChangeText(_ changedText: String) {
+        guard !changedText.isEmpty else {
             filteredItems = items
             return
         }
-        filteredItems = (items.filter{ $0.name.contains(text) }).sorted(by: { $1.name > $0.name })
+        filteredItems = (items.filter{ $0.name.contains(changedText) }).sorted(by: { $1.name > $0.name })
     }
     
     func fetchItems() {

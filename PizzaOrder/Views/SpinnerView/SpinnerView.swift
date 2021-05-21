@@ -14,7 +14,7 @@ class SpinnerView: UIView {
     
     init(forParent parentView: UIView) {
         self.parentView = parentView
-        spinner = UIActivityIndicatorView(style: .large)
+        spinner = UIActivityIndicatorView(style: .whiteLarge)
         super.init(frame: parentView.bounds)
         setup()
     }

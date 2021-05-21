@@ -28,7 +28,7 @@ class ItemSelectionViewController: UIViewController {
         super.viewDidLoad()
 
         searchBar.delegate = self
-        searchBar.searchTextField.backgroundColor = UIColor(hex: 0xE6E6E7)
+        (searchBar.value(forKey: "searchField") as? UITextField)?.backgroundColor = UIColor(hex: 0xE6E6E7)
         navigationController?.setNavigationBarHidden(true, animated: false)
         
         collectionView.delegate = self
@@ -106,7 +106,7 @@ extension ItemSelectionViewController: ItemSelectionViewModelDelegate {
 extension ItemSelectionViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.didChangeText(searchBar.searchTextField)
+        viewModel.didChangeText(searchText)
     }
 }
 
