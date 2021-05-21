@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ItemDetailsViewControllerDelegate: class {
+    func itemDetailsViewControllerDidTapBuyButton()
+}
+
 class ItemDetailsViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
@@ -16,6 +20,8 @@ class ItemDetailsViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     
     let viewModel: ItemDetailsViewModel
+    
+    weak var delegate: ItemDetailsViewControllerDelegate?
     
     init(withItem item: Item) {
         viewModel = ItemDetailsViewModel(withItem: item)
@@ -42,7 +48,9 @@ class ItemDetailsViewController: UIViewController {
     }
     
     @IBAction func didTapBuyButton(_ sender: Any) {
-        
+        dismiss(animated: true) {
+            self.delegate?.itemDetailsViewControllerDidTapBuyButton()
+        }
     }
 }
 

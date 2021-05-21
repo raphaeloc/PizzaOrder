@@ -47,6 +47,7 @@ extension ItemSelectionViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = viewModel.item(at: indexPath.row)
         let vc = ItemDetailsViewController(withItem: item)
+        vc.delegate = self
         present(vc, animated: true, completion: nil)
     }
     
@@ -102,5 +103,13 @@ extension ItemSelectionViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.didChangeText(searchBar.searchTextField)
+    }
+}
+
+extension ItemSelectionViewController: ItemDetailsViewControllerDelegate {
+    
+    func itemDetailsViewControllerDidTapBuyButton() {
+        let vc = ConfirmationViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

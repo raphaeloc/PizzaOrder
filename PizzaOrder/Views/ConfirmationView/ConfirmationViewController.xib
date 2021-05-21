@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConfirmationViewController" customModule="PizzaOrder" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="vNO-xs-Uf4" id="lg2-gQ-87S"/>
+                <outlet property="confirmView" destination="dlX-mn-ddt" id="Zq7-Je-fco"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlX-mn-ddt">
+                    <rect key="frame" x="67" y="191" width="186" height="186"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confirm" translatesAutoresizingMaskIntoConstraints="NO" id="NCI-BO-Lgh">
+                            <rect key="frame" x="43" y="43" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="s6S-4A-8SE"/>
+                                <constraint firstAttribute="height" constant="100" id="tK2-Wg-yLw"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.47843137250000001" green="0.77647058820000003" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="NCI-BO-Lgh" firstAttribute="centerX" secondItem="dlX-mn-ddt" secondAttribute="centerX" id="Rrt-bT-5KX"/>
+                        <constraint firstAttribute="height" constant="186" id="iSs-oY-fpe"/>
+                        <constraint firstItem="NCI-BO-Lgh" firstAttribute="centerY" secondItem="dlX-mn-ddt" secondAttribute="centerY" id="v5N-Ye-Tha"/>
+                        <constraint firstAttribute="width" constant="186" id="wiD-p0-3b1"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNO-xs-Uf4">
+                    <rect key="frame" x="56" y="427" width="208" height="40"/>
+                    <color key="backgroundColor" red="0.47843137250000001" green="0.77647058820000003" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="nlQ-Z7-Wfm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <state key="normal" title="Voltar">
+                        <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapBackButton:" destination="-1" eventType="touchUpInside" id="gqO-oA-ejg"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compra efetuada com sucesso!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbS-hC-4J2">
+                    <rect key="frame" x="57.5" y="75.5" width="205" height="57.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                    <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vNO-xs-Uf4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="56" id="1mL-iX-DvU"/>
+                <constraint firstItem="dlX-mn-ddt" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4Pf-wk-bhG"/>
+                <constraint firstItem="gbS-hC-4J2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6Xt-Z4-Nac"/>
+                <constraint firstItem="dlX-mn-ddt" firstAttribute="top" secondItem="gbS-hC-4J2" secondAttribute="bottom" constant="58" id="DTa-6S-25v"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vNO-xs-Uf4" secondAttribute="trailing" constant="56" id="YhJ-gB-QuC"/>
+                <constraint firstItem="vNO-xs-Uf4" firstAttribute="top" secondItem="dlX-mn-ddt" secondAttribute="bottom" constant="50" id="cTz-Qv-MgM"/>
+                <constraint firstItem="gbS-hC-4J2" firstAttribute="width" secondItem="dlX-mn-ddt" secondAttribute="width" multiplier="1.10215" id="rUg-eG-boh"/>
+                <constraint firstItem="dlX-mn-ddt" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="u8G-di-Jd1"/>
+            </constraints>
+            <point key="canvasLocation" x="138.75" y="152.11267605633802"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="confirm" width="369" height="369"/>
+    </resources>
+</document>

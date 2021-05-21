@@ -18,6 +18,8 @@
 		CF50184E26571ACD00CA44F9 /* SizeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF50184D26571ACD00CA44F9 /* SizeSelectView.swift */; };
 		CF501853265721F600CA44F9 /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF501852265721F600CA44F9 /* ItemDetailsViewModel.swift */; };
 		CF5018682657293A00CA44F9 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5018672657293A00CA44F9 /* SpinnerView.swift */; };
+		CFBDED8926572D47003E00FB /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBDED8726572D47003E00FB /* ConfirmationViewController.swift */; };
+		CFBDED8A26572D47003E00FB /* ConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFBDED8826572D47003E00FB /* ConfirmationViewController.xib */; };
 		CFD2AEFF2656E49100756268 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AEFE2656E49100756268 /* Login.swift */; };
 		CFD2AF082656EE7500756268 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF072656EE7500756268 /* Constants.swift */; };
 		CFD2AF102656EEA100756268 /* Constants+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD2AF0F2656EEA100756268 /* Constants+Keys.swift */; };
@@ -78,6 +80,8 @@
 		CF50184D26571ACD00CA44F9 /* SizeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeSelectView.swift; sourceTree = "<group>"; };
 		CF501852265721F600CA44F9 /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
 		CF5018672657293A00CA44F9 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		CFBDED8726572D47003E00FB /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		CFBDED8826572D47003E00FB /* ConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationViewController.xib; sourceTree = "<group>"; };
 		CFD2AEFE2656E49100756268 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		CFD2AF072656EE7500756268 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CFD2AF0F2656EEA100756268 /* Constants+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Keys.swift"; sourceTree = "<group>"; };
@@ -190,6 +194,15 @@
 				CF5018672657293A00CA44F9 /* SpinnerView.swift */,
 			);
 			path = SpinnerView;
+			sourceTree = "<group>";
+		};
+		CFBDED8626572D33003E00FB /* ConfirmationView */ = {
+			isa = PBXGroup;
+			children = (
+				CFBDED8726572D47003E00FB /* ConfirmationViewController.swift */,
+				CFBDED8826572D47003E00FB /* ConfirmationViewController.xib */,
+			);
+			path = ConfirmationView;
 			sourceTree = "<group>";
 		};
 		CFD2AEFD2656E46E00756268 /* Models */ = {
@@ -307,6 +320,7 @@
 		CFD32C012656D8AA00D5F6C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CFBDED8626572D33003E00FB /* ConfirmationView */,
 				CF5018662657292A00CA44F9 /* SpinnerView */,
 				CF50184C26571AB600CA44F9 /* SizeSelectView */,
 				CF501843265719F600CA44F9 /* SizeSelectStackView */,
@@ -459,6 +473,7 @@
 				CFD32C062656D8F500D5F6C0 /* LoginViewController.xib in Resources */,
 				CF50182B265707AA00CA44F9 /* TitleCollectionReusableView.xib in Resources */,
 				CFD2AF362656F46900756268 /* ItemCollectionViewCell.xib in Resources */,
+				CFBDED8A26572D47003E00FB /* ConfirmationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +607,7 @@
 				CFD32C052656D8F500D5F6C0 /* LoginViewController.swift in Sources */,
 				CFD2AEFF2656E49100756268 /* Login.swift in Sources */,
 				CFD32BCC2656D7DC00D5F6C0 /* AppDelegate.swift in Sources */,
+				CFBDED8926572D47003E00FB /* ConfirmationViewController.swift in Sources */,
 				CFD2AF252656F02300756268 /* ItemSelectionService.swift in Sources */,
 				CFD2AF5A2656FA1800756268 /* UICollectionView+Utils.swift in Sources */,
 				CFD2AF4B2656F8A200756268 /* Item.swift in Sources */,
