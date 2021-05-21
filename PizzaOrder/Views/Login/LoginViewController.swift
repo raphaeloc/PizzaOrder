@@ -44,6 +44,7 @@ class LoginViewController: UIViewController {
         
         spinnerView.show()
         viewModel.doLogin(withLogin: login, password: password) { [weak self] result in
+            self?.spinnerView.hide()
             guard result else {
                 let alert = UIAlertController(title: "Erro", message: "Login ou senha inválidos, tente novamente.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
@@ -54,7 +55,6 @@ class LoginViewController: UIViewController {
             
             self?.viewModel.saveLogin(login)
             self?.openSelectOrder()
-            self?.spinnerView.hide()
         }
     }
     
