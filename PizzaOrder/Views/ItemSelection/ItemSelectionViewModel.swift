@@ -43,7 +43,7 @@ class ItemSelectionViewModel {
             filteredItems = items
             return
         }
-        filteredItems = (items.filter{ $0.name.contains(text) }).sorted(by: { $1.rating < $0.rating })
+        filteredItems = (items.filter{ $0.name.contains(text) }).sorted(by: { $1.name > $0.name })
     }
     
     func fetchItems() {
@@ -53,7 +53,7 @@ class ItemSelectionViewModel {
             }
             
             self?.isFetching = false
-            self?.items = decodedData.sorted(by: { $1.rating < $0.rating })
+            self?.items = decodedData.sorted(by: { $1.name > $0.name })
         }
     }
     

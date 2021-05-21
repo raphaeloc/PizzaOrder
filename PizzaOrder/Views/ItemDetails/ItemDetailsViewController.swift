@@ -37,6 +37,10 @@ class ItemDetailsViewController: UIViewController {
         setupView()
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     func setupView() {
         sizeSelectStackView.delegate = self
         

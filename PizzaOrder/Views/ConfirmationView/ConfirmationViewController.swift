@@ -19,6 +19,10 @@ class ConfirmationViewController: UIViewController {
         backButton.layer.cornerRadius = 10
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     @IBAction func didTapBackButton(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
