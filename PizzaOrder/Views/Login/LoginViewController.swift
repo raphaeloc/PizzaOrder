@@ -31,6 +31,9 @@ class LoginViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
         userTextfield.text = UserDefaults().string(forKey: Constants.Keys.loginUserDefaultsKey)
         loginButton.layer.cornerRadius = 10
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
     }
     
     @IBAction func didTapLoginButton(_ sender: Any) {
@@ -61,5 +64,27 @@ class LoginViewController: UIViewController {
     func openSelectOrder() {
         let vc = ItemSelectionViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @objc
+    func keyboardDidShow(_ notification: Notification) {
+        guard let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+            view.frame.origin.y = 0
+            return
+        }
+        
+        let keyboardRectangle = keyboardFrame.cgRectValue
+        let keyboardHeight = keyboardRectangle.height
+        
+        UIView.animate(withDuration: 0.25) {
+            self.view.frame.origin.y = -(keyboardHeight - 60)
+        }
+    }
+    
+    @objc
+    func keyboardDidHide(_ notification: Notification) {
+        UIView.animate(withDuration: 0.25) {
+            self.view.frame.origin.y = 0
+        }
     }
 }
