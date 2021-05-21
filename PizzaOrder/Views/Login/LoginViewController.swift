@@ -47,11 +47,18 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(UIResponder.keyboardDidShowNotification)
+        NotificationCenter.default.removeObserver(UIResponder.keyboardDidHideNotification)
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
     
     @IBAction func didTapLoginButton(_ sender: Any) {
+        userTextfield.resignFirstResponder()
+        passwordTextfield.resignFirstResponder()
         guard let login = userTextfield.text, let password = passwordTextfield.text else {
             let alert = UIAlertController(title: "Erro", message: "Digite o login e a senha", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

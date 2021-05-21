@@ -13,6 +13,7 @@ class ItemSelectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let viewModel: ItemSelectionViewModel
+    var isKeyboardShow = false
     
     init() {
         viewModel = ItemSelectionViewModel()
@@ -27,10 +28,34 @@ class ItemSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchBar.delegate = self
-        (searchBar.value(forKey: "searchField") as? UITextField)?.backgroundColor = UIColor(hex: 0xE6E6E7)
+        setupSearchBar()
+        setupCollectionView()
+        setupGesture()
+        setupNotification()
         navigationController?.setNavigationBarHidden(true, animated: false)
-        
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(UIResponder.keyboardDidShowNotification)
+        NotificationCenter.default.removeObserver(UIResponder.keyboardDidHideNotification)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
+    func setupNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+    }
+    
+    func setupGesture() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(shouldDismissKeyboard))
+        gesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(gesture)
+    }
+    
+    func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isScrollEnabled = false
@@ -41,8 +66,44 @@ class ItemSelectionViewController: UIViewController {
         (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionHeadersPinToVisibleBounds = true
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
+    func setupSearchBar() {
+        searchBar.delegate = self
+        searchBar.getTextfield().backgroundColor = UIColor(hex: 0xE6E6E7)
+        searchBar.getTextfield().delegate = self
+    }
+    
+    @objc
+    func shouldDismissKeyboard() {
+        searchBar.getTextfield().resignFirstResponder()
+    }
+    
+    @objc
+    func keyboardDidShow(_ notification: Notification) {
+        guard let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue, !isKeyboardShow else {
+            (self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionInset.bottom = 0
+            return
+        }
+        
+        isKeyboardShow = true
+        
+        let keyboardRectangle = keyboardFrame.cgRectValue
+        let keyboardHeight = keyboardRectangle.height
+        
+        UIView.animate(withDuration: 0.25) {
+            (self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionInset.bottom = keyboardHeight + 12
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc
+    func keyboardDidHide(_ notification: Notification) {
+        guard isKeyboardShow else { return }
+        isKeyboardShow = false
+        
+        UIView.animate(withDuration: 0.25) {
+            (self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.sectionInset.bottom = 0
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
@@ -100,6 +161,13 @@ extension ItemSelectionViewController: ItemSelectionViewModelDelegate {
             self.collectionView.isUserInteractionEnabled = true
             self.collectionView.reloadData()
         }
+    }
+}
+
+extension ItemSelectionViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }
 
